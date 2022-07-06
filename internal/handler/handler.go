@@ -69,11 +69,11 @@ func (s *Handler) reverseProxy(w http.ResponseWriter, r *http.Request) {
 
 	var u *url.URL
 	if s.class == service.SPOT {
-		r.Host = "api.binance.com"
-		u, _ = url.Parse("https://api.binance.com")
+		r.Host = "api.binance.me"
+		u, _ = url.Parse("https://api.binance.me")
 	} else {
-		r.Host = "fapi.binance.com"
-		u, _ = url.Parse("https://fapi.binance.com")
+		r.Host = "fapi.binance.me"
+		u, _ = url.Parse("https://fapi.binance.me")
 	}
 
 	proxy := httputil.NewSingleHostReverseProxy(u)
